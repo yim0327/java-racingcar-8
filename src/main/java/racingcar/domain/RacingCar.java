@@ -7,6 +7,7 @@ public class RacingCar {
 
     private RacingCar(String carName) {
         validateNameLength(carName);
+        validateNotBlankCarName(carName);
         this.carName = carName;
         this.forwardCount = 0;
     }
@@ -32,4 +33,11 @@ public class RacingCar {
             throw new IllegalArgumentException("자동차 이름은 최대 5자까지만 가능합니다.");
         }
     }
+
+    private void validateNotBlankCarName(String carName) {
+        if (carName.trim().isEmpty()) {
+            throw new IllegalArgumentException("자동차 이름은 비어 있을 수 없습니다.");
+        }
+    }
+
 }
