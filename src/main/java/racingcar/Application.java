@@ -3,6 +3,7 @@ package racingcar;
 import racingcar.controller.GameManager;
 import racingcar.domain.CarMover;
 import racingcar.domain.CarRegistration;
+import racingcar.domain.WinningJudgment;
 import racingcar.domain.generator.NumberGenerator;
 import racingcar.domain.generator.RandomNumberGenerator;
 import racingcar.service.RacingGame;
@@ -11,10 +12,11 @@ import racingcar.view.InputView;
 public class Application {
     public static void main(String[] args) {
         InputView inputView = new InputView();
-        CarRegistration carRegistration = new CarRegistration();
+        CarRegistration registration = new CarRegistration();
         NumberGenerator generator = new RandomNumberGenerator();
         CarMover mover = new CarMover(generator);
-        RacingGame racingGame = new RacingGame(carRegistration, mover);
+        WinningJudgment judgment = new WinningJudgment();
+        RacingGame racingGame = new RacingGame(registration, mover, judgment);
         GameManager gameManager = new GameManager(inputView, racingGame);
 
         gameManager.start();

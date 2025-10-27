@@ -1,19 +1,18 @@
 package racingcar.service;
 
-import racingcar.domain.CarMover;
-import racingcar.domain.CarRegistration;
-import racingcar.domain.RacingCar;
-import racingcar.domain.RegisteredCarList;
+import racingcar.domain.*;
 
 import java.util.List;
 
 public class RacingGame {
-    private CarRegistration carRegistration;
-    private CarMover carMover;
+    private final CarRegistration carRegistration;
+    private final CarMover carMover;
+    private final WinningJudgment winningJudgment;
 
-    public RacingGame(CarRegistration carRegistration, CarMover carMover) {
+    public RacingGame(CarRegistration carRegistration, CarMover carMover, WinningJudgment winningJudgment) {
         this.carRegistration = carRegistration;
         this.carMover = carMover;
+        this.winningJudgment = winningJudgment;
     }
 
     public RegisteredCarList preparateVehicle(List<String> carNames) {
@@ -22,6 +21,10 @@ public class RacingGame {
 
     public void playRound(RacingCar car) {
         carMover.playTurn(car);
+    }
+
+    public List<String> judge(RegisteredCarList registeredCarList) {
+        return winningJudgment.judge(registeredCarList.getCarList());
     }
 
 }
