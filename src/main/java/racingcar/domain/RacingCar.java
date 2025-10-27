@@ -15,6 +15,10 @@ public class RacingCar {
         return new RacingCar(carName);
     }
 
+    public void move() {
+        forwardCount++;
+    }
+
     private void validateNameLength(String carName) {
         if (carName.length() > MAX_CAR_NAME_LENGTH) {
             throw new IllegalArgumentException("자동차 이름은 최대 5자까지만 가능합니다.");
