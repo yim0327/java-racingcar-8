@@ -1,7 +1,13 @@
 package racingcar;
 
+import racingcar.controller.GameManager;
+import racingcar.view.InputView;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        InputView inputView = new InputView();
+        GameManager gameManager = new GameManager(inputView);
+
+        gameManager.start();
     }
 }
