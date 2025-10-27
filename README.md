@@ -22,11 +22,11 @@
 
     - [x] 자동차 이름은 쉼표(`,`)를 기준으로 구분한다.
 
-- [ ] 사용자는 게임 진행 횟수를 입력할 수 있다.
+- [x] 사용자는 게임 진행 횟수를 입력할 수 있다.
 
-    - [ ] 숫자 외의 다른 값이 입력되면 `IllegalArgumentException`을 발생시킨다.
+    - [x] 숫자 외의 다른 값이 입력되면 `IllegalArgumentException`을 발생시킨다.
 
-    - [ ] 진행 횟수로 `0`이 들어오면 `IllegalArgumentException`을 발생시킨다.
+    - [x] 진행 횟수로 `0`이 들어오면 `IllegalArgumentException`을 발생시킨다.
 
 
 ### 출력
@@ -50,9 +50,9 @@
 
     - [x] 입력한 자동차 이름이 5자 초과일 때 `IllegalArgumentException`을 발생시킨다.
 
-- [ ] 자동차는 최소 한 대 이상 입력되어야 한다.
+- [x] 자동차는 최소 한 대 이상 입력되어야 한다.
 
-    - [ ] 공백이나 띄어쓰기 입력 시 `IllegalArgumentException`을 발생시킨다.
+    - [x] 공백이나 띄어쓰기 입력 시 `IllegalArgumentException`을 발생시킨다.
 
 
 ### 게임 진행
